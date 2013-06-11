@@ -18,8 +18,10 @@
 	<haxelib name="msignal" />
 	
 	<!-- Extensions -->
-	<include path="extensions/WebView/include.nmml" />
-	
+	<java path="extensions/WebView/project/android" if="android" />
+	<dependency name="UIKit.framework" if="ios"/>
+	<ndll name="nmewebview" if="ios" />
+
 	<!-- assets -->
 	<icon path="assets/nme.svg" />
 	

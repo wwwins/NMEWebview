@@ -26,9 +26,9 @@ package com.arcademonk.webview;
 				if (APINavigate == null) APINavigate = nme.JNI.createStaticMethod("com.arcademonk.haxe.NMEWebView", "APINavigate", "(Ljava/lang/String;)V");
 				if (APIDestroy == null) APIDestroy = nme.JNI.createStaticMethod("com.arcademonk.haxe.NMEWebView", "APIDestroy", "()V");
 			#elseif iphone
-                if (APIInit == null) APIInit = nme.Loader.load("webviewAPIInit", 3);
-				if (APINavigate == null) APINavigate = nme.Loader.load("webviewAPINavigate", 1);
-				if (APIDestroy == null) APIDestroy = nme.Loader.load("webviewAPIDestroy", 0);
+                if (APIInit == null) APIInit = flash.Lib.load("webviewAPIInit", "3");
+				if (APINavigate == null) APINavigate = flash.Lib.load("webviewAPINavigate", "1");
+				if (APIDestroy == null) APIDestroy = flash.Lib.load("webviewAPIDestroy", "0");
 			#end
 		}
 		
